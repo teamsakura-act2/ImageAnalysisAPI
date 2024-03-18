@@ -38,7 +38,6 @@ def calculateResult(target_des, comp_des, bf):
 @app.get("/search/")
 async def search_countryflag(base64data: str):
     
-    
     result_code_list = []
     result_name_list = []
 
