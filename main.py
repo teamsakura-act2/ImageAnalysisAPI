@@ -9,8 +9,18 @@ import io
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from typing import List
+from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# CORSを回避するために追加
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 REFERENCE_VALUE = 20
 IMG_SIZE = (100, 100)
