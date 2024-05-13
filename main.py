@@ -13,7 +13,6 @@ from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
-
 # CORSを回避するために追加
 app.add_middleware(
     CORSMiddleware,
@@ -46,7 +45,7 @@ def calculateResult(target_des, comp_des, bf):
     else:
         return 10000
 
-@app.get("/search/")
+@app.post("/search/")
 async def search_countryflag(base64data: str):
     
     result_code_list = []
