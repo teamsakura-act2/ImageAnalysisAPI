@@ -13,6 +13,7 @@ from starlette.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
+
 # CORSを回避するために追加
 app.add_middleware(
     CORSMiddleware,
