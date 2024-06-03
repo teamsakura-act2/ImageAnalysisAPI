@@ -45,7 +45,7 @@ def calculateResult(target_des, comp_des, bf):
     else:
         return 10000
 
-@app.post("/search/")
+@app.get("/search/")
 async def search_countryflag(base64data: str):
     
     result_code_list = []
@@ -108,5 +108,5 @@ async def search_countryflag(base64data: str):
     else:
         return {"code": None, "name": None, "status": "1", "errorMessage": "該当する国旗がありません。"}
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+# if __name__ == "__main__":
+#     uvicorn.run(app, host="0.0.0.0", port=8000)
