@@ -2,11 +2,3 @@ fastapi
 uvicorn
 starlette
 pydantic
-base64
-cv2
-numpy
-PIL
-io
-pymongo.mongo_client
-pymongo.server_api
-typing
