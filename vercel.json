@@ -1,16 +1,16 @@
 {
+    "builds": [
+      {
+        "src": "main.py",
+        "use": "@vercel/python",
+        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+      }
+    ],
     "routes": [
       {
         "src": "/(.*)",
         "dest": "main.py"
       }
-    ],
-    "functions": {
-      "**": {
-        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
-      },    
-      "src": "main.py",
-      "use": "@vercel/python"
-    }  
+    ]
 }
   
