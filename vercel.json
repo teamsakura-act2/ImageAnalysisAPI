@@ -10,6 +10,11 @@
         "src": "/(.*)",
         "dest": "main.py"
       }
-    ]  
-  }
+    ],
+    "functions": {
+      "**": {
+        "excludeFiles": "{.next,*.cache,node_modules,public,app}/**"
+      }
+    }  
+}
   
